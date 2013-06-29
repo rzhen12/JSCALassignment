@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Calcultor</title>
+<style>
+	#Disp{
+		border-style:inset;
+		width:130pt;
+	}
+	div {
+		width:143pt;
+		background-color:##d0e4fe;
+		margin-left:40%;
+		margin-right:20%;
+		padding:1em;
+		border-style:solid;
+		border-color:grey;
+	}
+	.btn,.random{
+		width:30pt;
+		padding:1em;
+	}	
+</style>
+</head>
+<body>
+
+<div>
+    
+<form name="displayfield">
+
+	<p>JS Calculator</p>
+	<p><input type="text" name="ansfield" id="Disp"></p>
+</form>	
+<table cellpadding="2em">		
+		<tr>
+			<td><input class="btn" type="button" name=" " value=""></td>
+			<td><input class="btn" type="button" name=" " value="c"></td>
+			<td><input class="btn" type="button" name=" " value=""></td>
+			<td><input class="btn" type="button" name=" " value="+"></td>
+		</tr>
+		
+		<tr>
+			<td><input class="btn" type="button" name=" " value="7"></td>
+			<td><input class="btn" type="button" name=" " value="8"></td>
+			<td><input class="btn" type="button" name=" " value="9"></td>
+			<td><input class="btn" type="button" name=" " value="-"></td>
+		</tr>
+		
+		<tr>
+			<td><input class="btn" type="button" name=" " value="4"></td>
+			<td><input class="btn" type="button" name=" " value="5"></td>
+			<td><input class="btn" type="button" name=" " value="6"></td>
+			<td><input class="btn" type="button" name=" " value="*"></td>
+		</tr>
+
+		<tr>
+			<td><input class="btn" type="button" name=" " value="1"></td>
+			<td><input class="btn" type="button" name=" " value="2"></td>
+			<td><input class="btn" type="button" name=" " value="3"></td>
+			<td><input class="random" type="button" name=" " value="/" Onclick="random()"></td>
+		</tr>
+		
+		<tr>
+			<td><input class="btn" type="button" name=" " value=""></td>
+			<td><input class="btn" type="button" name=" " value="0"></td>
+			<td><input class="btn" type="button" name=" " value=""></td>
+			<td><input class="btn" type="button" name=" " value="="></td>
+		</tr>
+</table>
+	
+</div>
+
+
+<script type="text/javascript" src="jscript.js"></script>
+
+</body>
+</html>
