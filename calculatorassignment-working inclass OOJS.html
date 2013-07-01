@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Calcultor</title>
+<style>
+	#Disp{
+		border-style:inset;
+		width:130pt;
+	}
+	div {
+		width:143pt;
+		background-color:##d0e4fe;
+		padding:1em;
+		border-style:solid;
+		border-color:grey;
+		margin-left:20%;
+		display: inline-block;
+	}
+	.btn,.random{
+		width:30pt;
+		padding:1em;
+	}	
+</style>
+</head>
+<body>
+
+<div id= "cal1">
+    
+<form name="displayfield">
+
+	<p>JS Calculator</p>
+	<p><input type="text" class="disp"></p>
+</form>	
+<table cellpadding="2em">		
+		<tr>
+			<td><input class="btn" type="button" name=" " value=""></td>
+			<td><input class="btn" type="button" name=" " value="c"></td>
+			<td><input class="btn" type="button" name=" " value=""></td>
+			<td><input class="btn" type="button" name=" " value="+"></td>
+		</tr>
+		
+		<tr>
+			<td><input class="btn" type="button" name=" " value="7"></td>
+			<td><input class="btn" type="button" name=" " value="8"></td>
+			<td><input class="btn" type="button" name=" " value="9"></td>
+			<td><input class="btn" type="button" name=" " value="-"></td>
+		</tr>
+		
+		<tr>
+			<td><input class="btn" type="button" name=" " value="4"></td>
+			<td><input class="btn" type="button" name=" " value="5"></td>
+			<td><input class="btn" type="button" name=" " value="6"></td>
+			<td><input class="btn" type="button" name=" " value="*"></td>
+		</tr>
+
+		<tr>
+			<td><input class="btn" type="button" name=" " value="1"></td>
+			<td><input class="btn" type="button" name=" " value="2"></td>
+			<td><input class="btn" type="button" name=" " value="3"></td>
+			<td><input class="random" type="button" name=" " value="/" Onclick="random()"></td>
+		</tr>
+		
+		<tr>
+			<td><input class="btn" type="button" name=" " value=""></td>
+			<td><input class="btn" type="button" name=" " value="0"></td>
+			<td><input class="btn" type="button" name=" " value=""></td>
+			<td><input class="btn" type="button" name=" " value="="></td>
+		</tr>
+</table>
+	
+</div>
+
+<div id= "cal2">
+    
+<form name="displayfield">
+
+	<p>JS Calculator</p>
+	<p><input type="text" class="disp"></p>
+</form>	
+<table cellpadding="2em">		
+		<tr>
+			<td><input class="btn" type="button" name=" " value=""></td>
+			<td><input class="btn" type="button" name=" " value="c"></td>
+			<td><input class="btn" type="button" name=" " value=""></td>
+			<td><input class="btn" type="button" name=" " value="+"></td>
+		</tr>
+		
+		<tr>
+			<td><input class="btn" type="button" name=" " value="7"></td>
+			<td><input class="btn" type="button" name=" " value="8"></td>
+			<td><input class="btn" type="button" name=" " value="9"></td>
+			<td><input class="btn" type="button" name=" " value="-"></td>
+		</tr>
+		
+		<tr>
+			<td><input class="btn" type="button" name=" " value="4"></td>
+			<td><input class="btn" type="button" name=" " value="5"></td>
+			<td><input class="btn" type="button" name=" " value="6"></td>
+			<td><input class="btn" type="button" name=" " value="*"></td>
+		</tr>
+
+		<tr>
+			<td><input class="btn" type="button" name=" " value="1"></td>
+			<td><input class="btn" type="button" name=" " value="2"></td>
+			<td><input class="btn" type="button" name=" " value="3"></td>
+			<td><input class="random" type="button" name=" " value="/" Onclick="random()"></td>
+		</tr>
+		
+		<tr>
+			<td><input class="btn" type="button" name=" " value=""></td>
+			<td><input class="btn" type="button" name=" " value="0"></td>
+			<td><input class="btn" type="button" name=" " value=""></td>
+			<td><input class="btn" type="button" name=" " value="="></td>
+		</tr>
+</table>
+	
+</div>
+<script>
+	//var ansfield = document.getElementById("disp");
+	//var ansfield2 = document.getElementById("disp2");
+	function calc(id){
+		var moduleNode = document.getElementById(id);
+		var disp = moduleNode.getElementsByClassName("disp")[0];
+		
+		function targetclicked(e){
+		var tar = e.target.value;	
+		if(e.target.type != 'button'){
+			return;
+		}
+
+		if(tar == "="){
+				disp.value=eval(disp.value)
+
+		}
+		
+		else if(tar === "c"){
+			disp.value = " ";
+		}
+		
+		else{
+					disp.value += tar;
+
+		}
+		
+		
+	}
+	
+	moduleNode.onclick = targetclicked;
+	
+}
+new calc("cal1");
+new calc("cal2");
+
+	/*function targetclicked(e){
+		var tar = e.target.value;	
+		if(e.target.type != 'button'){
+			return;
+		}
+
+		if(tar == "="){
+				ansfield.value=eval(ansfield.value)
+
+		}
+		
+		else if(tar === "c"){
+			ansfield.value = " ";
+		}
+		
+		else{
+					ansfield.value += tar;
+
+		}
+		
+	}
+		function targetclicked2(e){
+		var tar = e.target.value;	
+		if(e.target.type != 'button'){
+			return;
+		}
+
+		if(tar == "="){
+				ansfield2.value=eval(ansfield2.value)
+
+		}
+		
+		else if(tar === "c"){
+			ansfield2.value = " ";
+		}
+		
+		else{
+					ansfield2.value += tar;
+
+		}
+		
+	}
+	
+	document.getElementById("cal1").onclick=targetclicked;
+	document.getElementById("cal2").onclick=targetclicked2; */
+	
+</script>
+
+<!--<script type="text/javascript" src="jscript.js"></script>-->
+
+</body>
+</html>
